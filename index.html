@@ -70,6 +70,84 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-关于git分支branch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/" class="article-date">
+  <time datetime="2020-09-01T14:40:05.000Z" itemprop="datePublished">2020-09-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/">关于git分支branch</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h2><p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p>
+<p><strong>常用命令：</strong></p>
+<p>查看所有分支（包括远程分支和本地分支）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -a</span><br></pre></td></tr></table></figure>
+
+
+
+<p>创建分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch branchName</span><br></pre></td></tr></table></figure>
+
+<p>切换分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout branchName</span><br></pre></td></tr></table></figure>
+
+<p>创建分支并切换到该分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b branchName</span><br><span class="line">或者</span><br><span class="line">git branch branchName&amp;&amp;git checkout branchName</span><br></pre></td></tr></table></figure>
+
+
+
+<p>新建一条空分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan emptyBranchName</span><br><span class="line">git rm -rf</span><br></pre></td></tr></table></figure>
+
+
+
+<p>删除 <strong>本地</strong> 分支,会阻止删除包含为何并更改的分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d branchName</span><br></pre></td></tr></table></figure>
+
+<p>强制删除一个 <strong>本地</strong> 分支，即使包含未何并更改的分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D branchName</span><br></pre></td></tr></table></figure>
+
+<p>删除 <strong>远程</strong> 分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">推送一个空分支到宣称分支，其实就相当于删除远程分支</span><br><span class="line">git push origin :remoteBranchName</span><br><span class="line">或者</span><br><span class="line">git push origin --delete remoteBranchName</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改当前分支名</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m branchName</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>如何删除分支中的文件？</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin branchName</span><br><span class="line">删除文件</span><br><span class="line">git add .</span><br><span class="line">git commit -m xxx</span><br><span class="line">git push origin branchName</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/" data-id="ckek3qqtg0000igvg7uepe8e2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="vue入门项目TodoMVC实现和思考-vue入门项目TodoMVC实现和思考" class="article article-type-vue入门项目TodoMVC实现和思考" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/08/28/vue%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AETodoMVC%E5%AE%9E%E7%8E%B0%E5%92%8C%E6%80%9D%E8%80%83/" class="article-date">
@@ -561,7 +639,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a></li></ul>
     </div>
   </div>
 
@@ -572,6 +650,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/">关于git分支branch</a>
+          </li>
         
           <li>
             <a href="/2020/08/28/vue%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AETodoMVC%E5%AE%9E%E7%8E%B0%E5%92%8C%E6%80%9D%E8%80%83/">vue入门项目TodoMVC实现和思考</a>
