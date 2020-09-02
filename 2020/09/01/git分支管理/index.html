@@ -5,17 +5,17 @@
   
 
   
-  <title>关于git分支branch | 布纳纳大草莓</title>
+  <title>Git 分支管理 | 布纳纳大草莓</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git 分支管理使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 常用命令： 查看所有分支（包括远程分支和本地分支） 1git checkout -a    创建分支 1git branch branchName  切换分支 1git checkout branchName  创建分支并切换到该分支 123git checkout -b branchName或者git b">
+  <meta name="description" content="Git 分支管理使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 常用命令：查看所有分支（包括远程分支和本地分支） 1git checkout -a    创建分支 1git branch branchName  切换分支 1git checkout branchName  创建分支并切换到该分支 123git checkout -b branchName或者git br">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于git分支branch">
-<meta property="og:url" content="http://yoursite.com/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/index.html">
+<meta property="og:title" content="Git 分支管理">
+<meta property="og:url" content="http://yoursite.com/2020/09/01/git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/index.html">
 <meta property="og:site_name" content="布纳纳大草莓">
-<meta property="og:description" content="Git 分支管理使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 常用命令： 查看所有分支（包括远程分支和本地分支） 1git checkout -a    创建分支 1git branch branchName  切换分支 1git checkout branchName  创建分支并切换到该分支 123git checkout -b branchName或者git b">
+<meta property="og:description" content="Git 分支管理使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。 常用命令：查看所有分支（包括远程分支和本地分支） 1git checkout -a    创建分支 1git branch branchName  切换分支 1git checkout branchName  创建分支并切换到该分支 123git checkout -b branchName或者git br">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-01T14:40:05.000Z">
-<meta property="article:modified_time" content="2020-09-01T15:23:31.041Z">
+<meta property="article:modified_time" content="2020-09-02T14:48:23.268Z">
 <meta property="article:author" content="Nicklaus6">
 <meta name="twitter:card" content="summary">
   
@@ -70,9 +70,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-关于git分支branch" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git分支管理" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/" class="article-date">
+    <a href="/2020/09/01/git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/" class="article-date">
   <time datetime="2020-09-01T14:40:05.000Z" itemprop="datePublished">2020-09-01</time>
 </a>
     
@@ -84,7 +84,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于git分支branch
+      Git 分支管理
     </h1>
   
 
@@ -93,8 +93,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h2><p>使用分支意味着你可以从开发主线上分离开来，然后在不影响主线的同时继续工作。</p>
-<p><strong>常用命令：</strong></p>
-<p>查看所有分支（包括远程分支和本地分支）</p>
+<h4 id="常用命令："><a href="#常用命令：" class="headerlink" title="常用命令："></a>常用命令：</h4><p>查看所有分支（包括远程分支和本地分支）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -a</span><br></pre></td></tr></table></figure>
 
 
@@ -122,7 +121,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D branchName</span><br></pre></td></tr></table></figure>
 
 <p>删除 <strong>远程</strong> 分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">推送一个空分支到宣称分支，其实就相当于删除远程分支</span><br><span class="line">git push origin :remoteBranchName</span><br><span class="line">或者</span><br><span class="line">git push origin --delete remoteBranchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">推送一个空分支到远程分支，其实就相当于删除远程分支</span><br><span class="line">git push origin :remoteBranchName</span><br><span class="line">或者</span><br><span class="line">git push origin --delete remoteBranchName</span><br></pre></td></tr></table></figure>
+
+
+
+<p>git 代码库回滚：指的是将代码库某分支退回到以前的某个 commit id</p>
+<p>本地代码库回滚：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">回滚到 commit-id,将 commit-id 之后提交的 commit 都删除</span><br><span class="line">git reset --hard commit-id</span><br><span class="line"></span><br><span class="line">将最近3次的提交回滚</span><br><span class="line">git reset --hard HEAD~3</span><br></pre></td></tr></table></figure>
 
 
 
@@ -135,10 +140,43 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin branchName</span><br><span class="line">删除文件</span><br><span class="line">git add .</span><br><span class="line">git commit -m xxx</span><br><span class="line">git push origin branchName</span><br></pre></td></tr></table></figure>
 
 
+
+<p><strong>如何将分支合并到 master ？</strong></p>
+<ol>
+<li><p>切换到 master 分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git chechout master</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>如果是多人开发，需要把远程 master 上得代码 pull  下来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">如果是自己开发的话可以省去这步，但保险起见还是 pull 一下</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="3">
+<li><p>把分支代码合并到 master 上</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="4">
+<li><p>查看状态并提交到远程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/" data-id="ckek3qqtg0000igvg7uepe8e2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/09/01/git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/" data-id="ckelhz17b00002kvg0csk9xut" class="article-share-link">Share</a>
       
       
     </footer>
@@ -146,6 +184,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/09/02/git%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          git踩坑记录
+        
+      </div>
+    </a>
   
   
     <a href="/2020/08/28/vue%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AETodoMVC%E5%AE%9E%E7%8E%B0%E5%92%8C%E6%80%9D%E8%80%83/" id="article-nav-older" class="article-nav-link-wrap">
@@ -187,7 +234,11 @@
       <ul>
         
           <li>
-            <a href="/2020/09/01/%E5%85%B3%E4%BA%8Egit%E5%88%86%E6%94%AFbranch/">关于git分支branch</a>
+            <a href="/2020/09/02/git%E8%B8%A9%E5%9D%91%E8%AE%B0%E5%BD%95/">git踩坑记录</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/01/git%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">Git 分支管理</a>
           </li>
         
           <li>
