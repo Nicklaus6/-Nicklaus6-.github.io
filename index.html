@@ -70,6 +70,45 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git协同开发拉取项目" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/05/git%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E6%8B%89%E5%8F%96%E9%A1%B9%E7%9B%AE/" class="article-date">
+  <time datetime="2020-09-05T07:19:57.000Z" itemprop="datePublished">2020-09-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/05/git%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E6%8B%89%E5%8F%96%E9%A1%B9%E7%9B%AE/">git协同开发拉取项目</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="git多人开发"><a href="#git多人开发" class="headerlink" title="git多人开发"></a>git多人开发</h2><p>项目克隆完成之后，我们拉取的是master分支上的代码，由于master分支是主分支，项目多人开发的情况下，很容易造成冲突。<br>所以我们一般会在github远程新建一个自己的分支,如命名为：dev。</p>
+<h4 id="新建自己的远程开发分支"><a href="#新建自己的远程开发分支" class="headerlink" title="新建自己的远程开发分支"></a>新建自己的远程开发分支</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 方法一</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1. 本地初始化，确保当前文件夹是个 git仓库</span></span><br><span class="line">git init</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2. 关联远程仓库</span></span><br><span class="line">git remote add origin [address]</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3. 拉取分支代码</span></span><br><span class="line">git pull origin [branchName]</span><br><span class="line"><span class="meta">#</span><span class="bash"> 4. 创建并切换到自己的分支</span></span><br><span class="line">git checkout -b [yourBranchName]</span><br><span class="line"><span class="meta">#</span><span class="bash"> 5. 将自己的分支提交到远程 (当中如果有其他操作 要add和commit)</span></span><br><span class="line">git push origin [yourBranchName]</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 方法二</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 1. 本地没有初始化仓库，直接克隆</span></span><br><span class="line">git clone [address]</span><br><span class="line"><span class="meta">#</span><span class="bash"> 2. 创建并切换到自己的分支</span></span><br><span class="line">git checkout -b [yourBranchName]</span><br><span class="line"><span class="meta">#</span><span class="bash"> 3. 将自己的分支提交到远程 (当中如果有其他操作 要add和commit)</span></span><br><span class="line">git push origin [yourBranchName]</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/05/git%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E6%8B%89%E5%8F%96%E9%A1%B9%E7%9B%AE/" data-id="ckepe6lsw0000msvg96hs12as" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-[高频面试题]弄懂JS中的事件循环机制" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/09/03/%5B%E9%AB%98%E9%A2%91%E9%9D%A2%E8%AF%95%E9%A2%98%5D%E5%BC%84%E6%87%82JS%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6/" class="article-date">
@@ -297,29 +336,29 @@
 
 
 <p>创建分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch branchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch [branchName]</span><br></pre></td></tr></table></figure>
 
 <p>切换分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout branchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout [branchName]</span><br></pre></td></tr></table></figure>
 
 <p>创建分支并切换到该分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b branchName</span><br><span class="line">或者</span><br><span class="line">git branch branchName&amp;&amp;git checkout branchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b [branchName]</span><br><span class="line">或者</span><br><span class="line">git branch [branchName]&amp;&amp;git checkout [branchName]</span><br></pre></td></tr></table></figure>
 
 
 
 <p>新建一条空分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan emptyBranchName</span><br><span class="line">git rm -rf</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout --orphan [emptyBranchName]</span><br><span class="line">git rm -rf</span><br></pre></td></tr></table></figure>
 
 
 
 <p>删除 <strong>本地</strong> 分支,会阻止删除包含为何并更改的分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d branchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d [branchName]</span><br></pre></td></tr></table></figure>
 
 <p>强制删除一个 <strong>本地</strong> 分支，即使包含未何并更改的分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D branchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -D [branchName]</span><br></pre></td></tr></table></figure>
 
 <p>删除 <strong>远程</strong> 分支</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">推送一个空分支到远程分支，其实就相当于删除远程分支</span><br><span class="line">git push origin :remoteBranchName</span><br><span class="line">或者</span><br><span class="line">git push origin --delete remoteBranchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">推送一个空分支到远程分支，其实就相当于删除远程分支</span><br><span class="line">git push origin :[remoteBranchName]</span><br><span class="line">或者</span><br><span class="line">git push origin --delete [remoteBranchName]</span><br></pre></td></tr></table></figure>
 
 
 
@@ -330,12 +369,12 @@
 
 
 <p>修改当前分支名</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m branchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -m [branchName]</span><br></pre></td></tr></table></figure>
 
 
 
 <p><strong>如何删除分支中的文件？</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin branchName</span><br><span class="line">删除文件</span><br><span class="line">git add .</span><br><span class="line">git commit -m xxx</span><br><span class="line">git push origin branchName</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">git pull origin [branchName]</span><br><span class="line">删除文件</span><br><span class="line">git add .</span><br><span class="line">git commit -m xxx</span><br><span class="line">git push origin [branchName]</span><br></pre></td></tr></table></figure>
 
 
 
@@ -888,6 +927,10 @@
       <ul>
         
           <li>
+            <a href="/2020/09/05/git%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E6%8B%89%E5%8F%96%E9%A1%B9%E7%9B%AE/">git协同开发拉取项目</a>
+          </li>
+        
+          <li>
             <a href="/2020/09/03/%5B%E9%AB%98%E9%A2%91%E9%9D%A2%E8%AF%95%E9%A2%98%5D%E5%BC%84%E6%87%82JS%E4%B8%AD%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF%E6%9C%BA%E5%88%B6/">[高频面试题]弄懂JS中的事件循环机制</a>
           </li>
         
@@ -901,10 +944,6 @@
         
           <li>
             <a href="/2020/08/28/vue%E5%85%A5%E9%97%A8%E9%A1%B9%E7%9B%AETodoMVC%E5%AE%9E%E7%8E%B0%E5%92%8C%E6%80%9D%E8%80%83/">vue入门项目TodoMVC实现和思考</a>
-          </li>
-        
-          <li>
-            <a href="/2020/07/13/hello-world/">Hello World</a>
           </li>
         
       </ul>
